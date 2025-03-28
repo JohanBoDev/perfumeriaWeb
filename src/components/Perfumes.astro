@@ -1,0 +1,19 @@
+---
+// src/components/Perfumes.astro
+import { perfumes } from '../data/perfumes.data.js';
+---
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+	{perfumes.map(perfume => (
+	  <article class="bg-white shadow-md rounded-lg p-4 border border-gray-200">
+		<h2 class="text-xl font-bold text-sky-800">{perfume.nombre}</h2>
+		<p class="text-sm text-gray-600">{perfume.marca} · {perfume.genero} · {perfume.tamaño}</p>
+		<p class="mt-2 text-gray-800"><strong>Familia olfativa:</strong> {perfume.familiaOlfativa}</p>
+		<p><strong>Notas de Salida:</strong> {perfume.notasSalida.join(', ')}</p>
+		<p><strong>Notas de Corazón:</strong> {perfume.notasCorazon.join(', ')}</p>
+		<p><strong>Notas de Fondo:</strong> {perfume.notasFondo.join(', ')}</p>
+		<p class="mt-2 text-gray-700 italic">{perfume.descripcion}</p>
+	  </article>
+	))}
+  </section>
+  
