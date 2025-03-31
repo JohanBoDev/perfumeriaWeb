@@ -9,9 +9,9 @@ const leftMenu = [
 ];
 
 const rightMenu = [
-  { label: "Ofertas", path: "/#ofertas" },
-  { label: "Contacto", path: "/#contacto" },
-  { label: "Nosotros", path: "/#nosotros" },
+  { label: "Ofertas", path: "/ofertas" },
+  { label: "Contacto", path: "/contacto" },
+  { label: "Nosotros", path: "/nosotros" },
 ];
 
 export default function HeaderMobile() {
