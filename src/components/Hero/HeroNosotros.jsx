@@ -31,7 +31,7 @@ export default function HeroNosotros() {
               Ver Colección
             </a>
             <a
-              href="/opiniones"
+              href="#opiniones"
               className="border border-gray-400 hover:border-gray-700 text-gray-700 px-6 py-3 rounded-lg transition"
             >
               Opiniones de Clientes
