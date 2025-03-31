@@ -1,0 +1,59 @@
+---
+import HeaderDesktop from "../components/HeaderDesktop.jsx";
+import HeaderMobile from "../components/HeaderMobile.jsx";
+import HeroFavoritos from "@/components/Hero/HeroFavoritos.jsx";
+import FiltroPerfumes from "@/components/Perfumes/FiltroPerfume.jsx";
+import BannerPromo from "@/components/BannerPromo.astro";
+import MetodoPagoCarousel from "@/components/MetodoPagoCarousel.jsx";
+import Footer from "@/components/Footer.astro";
+import MapaUbicacion from "@/components/MapaUbicacion.astro";
+import PerfumesCarousel from "@/components/CarrouselPerfumes.jsx";
+import "../styles/global.css";
+---
+
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO para la página de perfumes -->
+    <title>Comprar Perfumes Originales en Colombia | Shesman Perfumes</title>
+    <meta name="description" content="Compra perfumes originales y exclusivos para hombre y mujer en Colombia. Fragancias auténticas, elegantes y con envío a todo el país." />
+    <meta name="keywords" content="perfumes originales, fragancias mujer, fragancias hombre, comprar perfumes Colombia, perfumes exclusivos, Shesman Perfumes" />
+    <meta name="robots" content="index, follow" />
+  </head>
+
+  <body class="relative min-h-screen w-full text-texto bg-white transition-colors duration-300 overflow-x-hidden">
+    <HeaderDesktop />
+    <HeaderMobile client:load />
+    
+    <!-- Fondo decorativo -->
+    <div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+      <main class="container mx-auto px-4 py-12 ">
+        <HeroFavoritos client:load />
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center  mt-10 mb-5">
+          Perfumes Originales para Hombre y Mujer
+        </h1>
+        <p class="text-center  text-neutral-600 mb-12 max-w-2xl mx-auto">
+          Descubre fragancias auténticas, elegantes y memorables para cada personalidad. Envíos a todo Colombia. Filtra por género, marca, tamaño o familia olfativa.
+        </p>
+
+        <FiltroPerfumes client:only="react" />
+        <div class="mt-10 mb-5">
+          <PerfumesCarousel client:only="react" />
+        </div>
+        <div class="mt-20">
+          <BannerPromo />
+        </div>
+        <div class="mt-10">
+          <MetodoPagoCarousel client:only="react" />
+        </div>
+        <div class="mt-10">
+          <MapaUbicacion />
+        </div>
+
+      </main>
+      <Footer />
+  </body>
+</html>

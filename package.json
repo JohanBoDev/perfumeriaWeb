@@ -9,9 +9,17 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.2.2",
     "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/vite": "^4.0.17",
-    "astro": "^5.5.5"
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "astro": "^5.5.5",
+    "framer-motion": "^12.6.2",
+    "lucide-react": "^0.485.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

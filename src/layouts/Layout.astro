@@ -1,0 +1,29 @@
+---
+import HeaderDesktop from "../components/HeaderDesktop.jsx";
+import HeaderMobile from "../components/HeaderMobile.jsx";
+import HeroSlider from "../components/Slider/HeroSlider.jsx";
+import PerfumesCarousel from "@/components/CarrouselPerfumes.jsx";
+import BannerPromo from "@/components/BannerPromo.astro";
+import MetodoPagoCarousel from "@/components/MetodoPagoCarousel.jsx";
+import Footer from "@/components/Footer.astro";
+import MapaUbicacion from "@/components/MapaUbicacion.astro";
+---
+
+<head>
+    <title>Inicio | Shesman Perfumes Premium - Perfumes Originales en Bogotá</title>
+    <meta name="description" content="Página de inicio de Shesman Perfumes Premium. Descubre perfumes originales y exclusivos para hombres y mujeres. Envíos a toda Colombia. Visítanos en Bogotá D.C." />
+    <meta name="robots" content="index, follow" />
+  </head>
+  
+<HeaderDesktop />
+<HeaderMobile client:load />
+<main class="mt-16">
+    <HeroSlider  client:only="react" />
+    <section class="container mx-auto px-4 py-8">
+        <PerfumesCarousel client:only="react" />
+        <BannerPromo />
+        <MetodoPagoCarousel client:only="react" />
+        <MapaUbicacion />
+    </section>
+    <Footer />
+</main>

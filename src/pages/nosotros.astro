@@ -1,0 +1,172 @@
+---
+import HeaderDesktop from "@/components/HeaderDesktop.jsx";
+import HeaderMobile from "@/components/HeaderMobile.jsx";
+import Footer from "@/components/Footer.astro";
+import HeroNosotros from "@/components/Hero/HeroNosotros.jsx";
+import OpinionesCarousel from "@/components/OpinionesCarousel.jsx";
+import "../styles/global.css";
+---
+
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nosotros | Shesman Perfumes Premium</title>
+    <meta name="description" content="Conoce a Shesman Perfumes Premium: calidad, exclusividad y atención personalizada. Más de 12.000 clientes satisfechos en Colombia." />
+    <meta name="keywords" content="nosotros perfumes, shesman perfumes, quiénes somos, historia, misión visión, empresa perfumes Colombia" />
+    <meta name="robots" content="index, follow" />
+  </head>
+
+  <body class="relative min-h-screen w-full text-texto transition-colors duration-300 overflow-x-hidden">
+    <HeaderDesktop />
+    <HeaderMobile client:load />
+    <div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+    <main>
+      <HeroNosotros client:load />
+      
+      <section class="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-16 text-gray-800 space-y-16">
+        <article class="max-w-6xl mx-auto text-center space-y-12">
+            <div class="max-w-4xl mx-auto">
+              <h2 class="text-3xl sm:text-4xl font-bold mb-6">¿Quiénes Somos?</h2>
+              <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                En <strong>Shesman Perfumes Premium</strong> nos dedicamos a ofrecer fragancias auténticas,
+                elegantes y duraderas. Nuestra pasión por los perfumes se refleja en cada detalle: desde la
+                selección de esencias hasta la atención al cliente. Nos hemos ganado la confianza de miles de
+                personas en Colombia gracias a la calidad y compromiso que nos representan.
+              </p>
+            </div>
+          
+            <div class="grid md:grid-cols-2 gap-8">
+              {/* Imagen Hombre */}
+              <div class="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="/img/hombre-nosotros.webp"
+                  alt="Hombre aplicando perfume Versace Eros con bolsa Shesman"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+          
+              {/* Imagen Mujer */}
+              <div class="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="/img/mujer-nosotros.webp"
+                  alt="Mujer aplicando perfume Good Girl con bolsa Shesman"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </article>
+          
+          <OpinionesCarousel client:load />
+
+<!-- Misión y Visión -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 py-16">
+    <div class="grid gap-8 lg:grid-cols-2">
+      
+      <!-- Misión -->
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-8 flex flex-col justify-between h-full">
+        <div class="flex items-center gap-3 mb-4">
+          <svg
+            class="w-8 h-8 text-black"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <h3 class="text-2xl font-bold text-black">Nuestra Misión</h3>
+        </div>
+        <p class="text-base text-black leading-relaxed">
+          Enriquecer la vida de nuestros clientes a través de <strong>fragancias exclusivas</strong> que despierten emociones,
+          fortalezcan la identidad y acompañen sus momentos más memorables.
+        </p>
+      </div>
+  
+      <!-- Visión -->
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-8 flex flex-col  h-full">
+        <div class="flex items-center gap-3 mb-4">
+          <svg
+            class="w-8 h-8 text-black"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7z" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+          <h3 class="text-2xl font-bold text-black">Nuestra Visión</h3>
+        </div>
+        <p class="text-base text-black leading-relaxed">
+          Ser una marca líder en <strong>perfumería premium en Colombia</strong>, reconocida por su calidad,
+          estilo y cercanía con el cliente.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  
+          
+          
+
+
+<!-- Diferenciadores -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 md:px-12  text-center">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-12 text-black">¿Por qué elegirnos?</h3>
+  
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-left">
+      <!-- Card -->
+      <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+        <h4 class="font-semibold text-lg text-black mb-2">Calidad Premium</h4>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Cada fragancia está cuidadosamente formulada para ofrecer elegancia y duración superior.
+        </p>
+      </div>
+  
+      <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+        <h4 class="font-semibold text-lg text-black mb-2">Atención Personalizada</h4>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Te asesoramos según tus gustos para ayudarte a encontrar el perfume ideal para ti.
+        </p>
+      </div>
+  
+      <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+        <h4 class="font-semibold text-lg text-black mb-2">Más de 12.000 Clientes</h4>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          La satisfacción de nuestros clientes nos impulsa a seguir creciendo cada día.
+        </p>
+      </div>
+  
+      <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+        <h4 class="font-semibold text-lg text-black mb-2">Diseño Exclusivo</h4>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Presentaciones elegantes que reflejan la esencia y sofisticación de cada aroma.
+        </p>
+      </div>
+  
+      <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+        <h4 class="font-semibold text-lg text-black mb-2">Envíos a Todo Colombia</h4>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Entregamos tu pedido con rapidez y cuidado en cualquier rincón del país.
+        </p>
+      </div>
+  
+      <div class="p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+        <h4 class="font-semibold text-lg text-black mb-2">Compra Segura</h4>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          Ofrecemos múltiples métodos de pago con total protección y confianza.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

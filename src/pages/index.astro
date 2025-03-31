@@ -1,15 +1,47 @@
 ---
-import Perfumes from '../components/Perfumes.astro';
+import Layout from "../layouts/Layout.astro";
+import '../styles/global.css';
 ---
 
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
-    <title>Catálogo de Perfumes</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="vercel-insights" content="false" />
 
+  <!-- SEO -->
+<title>Inicio | Shesman Perfumes Premium - Perfumes Originales para Hombre y Mujer</title>
+<meta name="description" content="Bienvenido a la página de inicio de Shesman Perfumes Premium. Descubre nuestro catálogo exclusivo de perfumes 100% originales para él y para ella. Envíos a toda Colombia." />
+  
+    <meta name="keywords" content="Shesman, perfumes premium, catálogo perfumes, fragancias hombre, fragancias mujer, perfumes exclusivos, ofertas perfumes" />
+    <meta name="author" content="Shesman Perfumes" />
+    <meta name="robots" content="index, follow" />
+  
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Shesman Perfumes Premium | Catálogo Exclusivo" />
+    <meta property="og:description" content="Explora nuestro catálogo de perfumes premium para todos los gustos. Fragancias que dejan huella." />
+    <meta property="og:image" content="/img/preview-catalogo.png" />
+    <meta property="og:url" content="https://tusitio.com" />
+    <meta property="og:type" content="website" />
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shesman Perfumes Premium | Catálogo Exclusivo" />
+    <meta name="twitter:description" content="Descarga o explora en línea nuestro catálogo con fragancias para cada personalidad." />
+    <meta name="twitter:image" content="/img/preview-catalogo.png" />
+  
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
   </head>
-  <body class="bg-gray-50 text-gray-900">
-    <h1 class="text-3xl font-bold text-center my-6">Perfumes Exclusivos</h1>
-    <Perfumes />
+  
+  <body class="relative min-h-screen w-full text-texto transition-colors duration-300 overflow-x-hidden">
+    
+    <!-- NUEVO FONDO -->
+    <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+    <!-- CONTENIDO -->
+    <Layout>
+    </Layout>
+    
   </body>
 </html>

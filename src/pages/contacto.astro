@@ -1,0 +1,185 @@
+---
+import HeaderDesktop from "@/components/HeaderDesktop.jsx";
+import HeaderMobile from "@/components/HeaderMobile.jsx";
+import HeroContacto from "@/components/Hero/HeroContacto";
+import Footer from "@/components/Footer.astro";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Instagram,
+  Facebook,
+  Clock,
+  UserCheck,
+} from "lucide-react";
+import "../styles/global.css";
+---
+
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contáctanos | Shesman Perfumes Premium</title>
+    <meta
+      name="description"
+      content="¿Tienes dudas sobre perfumes o pedidos? Contáctanos por WhatsApp, redes sociales o visítanos. Envíos a todo Colombia. Atención personalizada."
+    />
+    <meta
+      name="keywords"
+      content="contacto perfumes, atención al cliente perfumes, WhatsApp perfumes, Shesman Perfumes Colombia, tienda de perfumes Bogotá, cómo contactar shesman perfumes"
+    />
+    <meta name="robots" content="index, follow" />
+  </head>
+
+  <body
+    class="relative min-h-screen w-full text-texto transition-colors duration-300 overflow-x-hidden"
+  >
+    <HeaderDesktop />
+    <HeaderMobile client:load />
+
+    <!-- Fondo decorativo -->
+    <div
+      class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
+    >
+    </div>
+
+    <main class="container mx-auto px-4 sm:px-6 md:px-12 py-16">
+      <HeroContacto client:load />
+
+      <section class="text-center mb-10">
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-sky-900 mb-4"
+        >
+          Contáctanos
+        </h1>
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+          ¿Tienes preguntas sobre perfumes, pedidos o envíos? Escríbenos y te
+          responderemos lo antes posible. Nuestro equipo está listo para
+          ayudarte.
+        </p>
+      </section>
+
+      <section
+        class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start"
+        aria-label="Información de contacto"
+      >
+        <!-- Tarjetas -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <article class="contact-card">
+            <div class="contact-icon">
+              <Phone className="text-green-600 w-6 h-6" aria-hidden="true" />
+              <h2 class="contact-title">WhatsApp</h2>
+            </div>
+            <a
+              href="https://wa.me/573224395306"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link text-green-600"
+            >
+              +57 322 439 5306
+            </a>
+          </article>
+
+          <article class="contact-card ">
+            <div class="contact-icon">
+              <Instagram className="text-pink-600 w-6 h-6" aria-hidden="true" />
+              <h2 class="contact-title">Redes Sociales</h2>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="https://www.instagram.com/tuusuario"
+                target="_blank"
+                class="text-pink-600 hover:underline">Instagram</a
+              >
+              <a
+                href="https://www.facebook.com/tuusuario"
+                target="_blank"
+                class="text-blue-800 hover:underline flex items-center gap-1"
+              >
+                <Facebook className="w-5 h-5" aria-hidden="true" /> Facebook
+              </a>
+            </div>
+          </article>
+          <article class="contact-card col-span-1 sm:col-span-2">
+            <div class="contact-icon">
+              <Mail className="text-blue-600 w-6 h-6" aria-hidden="true" />
+              <h2 class="contact-title">Correo</h2>
+            </div>
+            <a
+              href="mailto:contacto@shesmanperfumes.com"
+              class="contact-link text-blue-600"
+            >
+              contacto@shesmanperfumes.com
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon">
+              <MapPin className="text-sky-700 w-6 h-6" aria-hidden="true" />
+              <h2 class="contact-title">Ubicación</h2>
+            </div>
+            <p class="text-gray-700">Bogotá, Colombia</p>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon">
+              <Clock className="text-yellow-500 w-6 h-6" aria-hidden="true" />
+              <h2 class="contact-title">Horario de Atención</h2>
+            </div>
+            <p class="text-gray-700">
+              Lunes a Sábado<br />8:00 a.m. - 6:00 p.m.
+            </p>
+          </article>
+
+          <article class="contact-card col-span-1 sm:col-span-2">
+            <div class="contact-icon">
+              <UserCheck
+                className="text-indigo-600 w-6 h-6"
+                aria-hidden="true"
+              />
+              <h2 class="contact-title">Atención Personalizada</h2>
+            </div>
+            <p class="text-gray-700">
+              Te asesoramos según tus gustos y necesidades. Atención rápida y
+              profesional.
+            </p>
+          </article>
+        </div>
+
+        <!-- Mapa + Dirección -->
+        <div class="space-y-6">
+          <header>
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">
+              Encuéntranos en Bogotá
+            </h2>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Nuestra tienda se encuentra en una zona exclusiva de la ciudad,
+              donde el lujo y la elegancia se encuentran con la sofisticación de
+              nuestras fragancias.
+            </p>
+            <p class="italic text-sm text-gray-500 mt-2">
+              Carrera 7 # 72 - 64, Bogotá D.C., Colombia
+            </p>
+          </header>
+
+          <div
+            class="overflow-hidden rounded-2xl shadow-lg border border-gray-200"
+            id="ubicacion"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.6478030416483!2d-74.05502542580961!3d4.668100641206329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a96c27d2d41%3A0x98756a5c264730c6!2sAk%207%20%2372-64%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1711842078213!5m2!1ses!2sco"
+              width="100%"
+              height="500"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación de Shesman Perfumes en Bogotá"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
