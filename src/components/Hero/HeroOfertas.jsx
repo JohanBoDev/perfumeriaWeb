@@ -20,7 +20,7 @@ export default function HeroOfertas() {
         Aprovecha descuentos únicos en perfumes seleccionados. ¡Fragancias exclusivas al mejor precio por tiempo limitado!
       </p>
       <div class="flex gap-4 flex-wrap">
-        <a href="/ofertas" class="bg-yellow-500 hover:bg-yellow-600 text-white font-medium px-6 py-3 rounded-lg transition">
+        <a href="#ofertas" class="bg-yellow-500 hover:bg-yellow-600 text-white font-medium px-6 py-3 rounded-lg transition">
           Ver Ofertas
         </a>
         <a href="/perfumes" class="border border-gray-400 hover:border-gray-700 text-gray-700 px-6 py-3 rounded-lg transition">
