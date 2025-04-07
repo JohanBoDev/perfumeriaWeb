@@ -18,10 +18,11 @@ import MapaUbicacion from "@/components/MapaUbicacion.astro";
 <HeaderDesktop />
 <HeaderMobile client:load />
 <main class="mt-16">
+    <BannerPromo />
     <HeroSlider  client:only="react" />
     <section class="container mx-auto px-4 py-8">
         <PerfumesCarousel client:only="react" />
-        <BannerPromo />
+
         <MetodoPagoCarousel client:only="react" />
         <MapaUbicacion />
     </section>
