@@ -27,7 +27,7 @@ const PerfumesCarousel = () => {
 <section
   id="favoritos"
   className="w-full max-w-screen-xl mx-auto px-4 py-10 
-             h-auto sm:h-[70vh] md:h-[75vh] lg:h-[80vh] xl:h-[85vh]"
+             h-[70vh] md:h-[75vh] lg:h-[80vh] xl:h-[80vh]"
 >
         <h2 className="text-3xl font-bold text-center mb-8 text-neutral-800">Perfumes Destacados</h2>
 

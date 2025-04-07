@@ -39,7 +39,7 @@ const HeroSlider = () => {
           nextEl: ".custom-swiper-button-next",
           prevEl: ".custom-swiper-button-prev"
         }}
-        autoplay={{ delay: 600000, disableOnInteraction: false }}
+        autoplay={{ delay: 6000, disableOnInteraction: false }}
         className="w-full"
       >
         <SwiperSlide><HeroHombre /></SwiperSlide>
