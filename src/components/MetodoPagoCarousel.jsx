@@ -38,7 +38,7 @@ const metodosPago = [
 
 export default function MetodoPagoCarousel() {
     return (
-        <section className="py-10 px-4  dark:bg-gray-900">
+        <section className="py-10 px-4 mt-10  dark:bg-gray-900">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white">
             Contamos con métodos de Pago Seguros
           </h2>
