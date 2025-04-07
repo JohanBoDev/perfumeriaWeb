@@ -1,6 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import '../styles/global.css';
+import HeaderDesktop from "@/components/HeaderDesktop.jsx";
+import HeaderMobile from "@/components/HeaderMobile.jsx";
+import HeroSlider from "../components/Slider/HeroSlider.jsx";
+import PerfumesCarousel from "@/components/CarrouselPerfumes.jsx";
+import BannerPromo from "@/components/BannerPromo.astro";
+import MetodoPagoCarousel from "@/components/MetodoPagoCarousel.jsx";
+import Footer from "@/components/Footer.astro";
+import MapaUbicacion from "@/components/MapaUbicacion.astro";
+
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -33,15 +42,25 @@ import '../styles/global.css';
     <!-- Favicon -->
     <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
   </head>
-  
+  <Layout>
   <body class="relative min-h-screen w-full text-texto transition-colors duration-300 overflow-x-hidden">
     
     <!-- NUEVO FONDO -->
     <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-    <!-- CONTENIDO -->
-    <Layout>
-    </Layout>
+    <HeaderDesktop />
+    <HeaderMobile client:load />
+    <main class="mt-16">
+        <BannerPromo />
+        <HeroSlider  client:only="react" />
+        <section class="container mx-auto px-4 py-8">
+            <PerfumesCarousel client:only="react" />
+    
+            <MetodoPagoCarousel client:only="react" />
+            <MapaUbicacion />
+        </section>
+    </main>
     
   </body>
+</Layout>
 </html>

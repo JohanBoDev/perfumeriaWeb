@@ -1,12 +1,11 @@
 ---
-import Footer from "@/components/Footer.astro";
-import HeaderDesktop from "@/components/HeaderDesktop.jsx";
-import HeaderMobile from "@/components/HeaderMobile.jsx";
+
 import HeroOfertas from "@/components/Hero/HeroOfertas.jsx";
 import BannerPromo from "@/components/BannerPromo.astro";
 import MetodoPagoCarousel from "@/components/MetodoPagoCarousel.jsx";
 import OfertasListaYModal from "@/components/Ofertas/OfertasListaYModal.jsx";
 import {perfumes} from "@/data/perfumes-puro.data.js";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -20,10 +19,8 @@ import {perfumes} from "@/data/perfumes-puro.data.js";
         <!-- Favicon -->
         <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
   </head>
-
+ <Layout>
   <body class="relative min-h-screen w-full text-texto bg-white transition-colors duration-300 overflow-x-hidden">
-    <HeaderDesktop />
-    <HeaderMobile client:load />
 
     <div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
     <HeroOfertas client:load />
@@ -44,6 +41,6 @@ import {perfumes} from "@/data/perfumes-puro.data.js";
         </div>
     </main>
 
-    <Footer />
   </body>
+ </Layout>
 </html>

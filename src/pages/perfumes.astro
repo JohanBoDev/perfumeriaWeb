@@ -1,14 +1,13 @@
 ---
-import HeaderDesktop from "../components/HeaderDesktop.jsx";
-import HeaderMobile from "../components/HeaderMobile.jsx";
+
 import HeroFavoritos from "@/components/Hero/HeroFavoritos.jsx";
 import FiltroPerfumes from "@/components/Perfumes/FiltroPerfume.jsx";
 import BannerPromo from "@/components/BannerPromo.astro";
 import MetodoPagoCarousel from "@/components/MetodoPagoCarousel.jsx";
-import Footer from "@/components/Footer.astro";
 import MapaUbicacion from "@/components/MapaUbicacion.astro";
 import PerfumesCarousel from "@/components/CarrouselPerfumes.jsx";
 import "../styles/global.css";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -24,10 +23,9 @@ import "../styles/global.css";
         <!-- Favicon -->
         <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
   </head>
-
+ <Layout>
   <body class="relative min-h-screen w-full text-texto bg-white transition-colors duration-300 overflow-x-hidden">
-    <HeaderDesktop />
-    <HeaderMobile client:load />
+
     
     <!-- Fondo decorativo -->
     <div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
@@ -56,6 +54,6 @@ import "../styles/global.css";
         </div>
 
       </main>
-      <Footer />
   </body>
+</Layout>
 </html>

@@ -1,19 +1,19 @@
 ---
+// src/layouts/Layout.astro
 import HeaderDesktop from "../components/HeaderDesktop.jsx";
 import HeaderMobile from "../components/HeaderMobile.jsx";
-import HeroSlider from "../components/Slider/HeroSlider.jsx";
-import PerfumesCarousel from "@/components/CarrouselPerfumes.jsx";
-import BannerPromo from "@/components/BannerPromo.astro";
-import MetodoPagoCarousel from "@/components/MetodoPagoCarousel.jsx";
 import Footer from "@/components/Footer.astro";
-import MapaUbicacion from "@/components/MapaUbicacion.astro";
 ---
 
-<head>
-    <title>Inicio | Shesman Perfumes Premium - Perfumes Originales en Bogotá</title>
-    <meta name="description" content="Página de inicio de Shesman Perfumes Premium. Descubre perfumes originales y exclusivos para ti." />
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shesman Perfumes Premium</title>
+    <meta name="description" content="Perfumes originales para hombre y mujer. Compra segura en Shesman Perfumes." />
     <meta name="robots" content="index, follow" />
-  
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6RGXWTP3S"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -23,19 +23,16 @@ import MapaUbicacion from "@/components/MapaUbicacion.astro";
       gtag('js', new Date());
       gtag('config', 'G-M6RGXWTP3S');
     </script>
-    
   </head>
-  
-<HeaderDesktop />
-<HeaderMobile client:load />
-<main class="mt-16">
-    <BannerPromo />
-    <HeroSlider  client:only="react" />
-    <section class="container mx-auto px-4 py-8">
-        <PerfumesCarousel client:only="react" />
 
-        <MetodoPagoCarousel client:only="react" />
-        <MapaUbicacion />
-    </section>
+  <body class="bg-white text-neutral-800">
+    <HeaderDesktop />
+    <HeaderMobile client:load />
+
+    <main class="mt-16">
+      <slot /> <!-- Aquí se inyectará el contenido de cada página -->
+    </main>
+
     <Footer />
-</main>
+  </body>
+</html>

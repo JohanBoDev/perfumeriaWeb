@@ -1,11 +1,10 @@
 ---
-import Footer from "@/components/Footer.astro";
-import HeaderDesktop from "@/components/HeaderDesktop.jsx";
-import HeaderMobile from "@/components/HeaderMobile.jsx";
+
 import HeroCatalogos from "@/components/Hero/HeroCatalogos.jsx";
 import BannerPromo from "@/components/BannerPromo.astro";
 import MapaUbicacion from "@/components/MapaUbicacion.astro";
 import "../styles/global.css";
+import Layout from "@/layouts/Layout.astro";
 
 const catalogos = [
   {
@@ -48,11 +47,11 @@ const catalogos = [
   <meta name="robots" content="index, follow" />
      <!-- Favicon -->
      <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
-  <body
+  <Layout>
+     <body
     class="relative min-h-screen w-full text-texto bg-white transition-colors duration-300 overflow-x-hidden"
   >
-    <HeaderDesktop />
-    <HeaderMobile client:load />
+
     <!-- Fondo decorativo -->
     <div
       class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
@@ -113,6 +112,6 @@ const catalogos = [
       <MapaUbicacion />
     </main>
 
-    <Footer />
   </body>
+  </Layout>
 </head>

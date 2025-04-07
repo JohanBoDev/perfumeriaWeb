@@ -5,6 +5,7 @@ import Footer from "@/components/Footer.astro";
 import HeroNosotros from "@/components/Hero/HeroNosotros.jsx";
 import OpinionesCarousel from "@/components/OpinionesCarousel.jsx";
 import "../styles/global.css";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -28,12 +29,11 @@ import "../styles/global.css";
       type="image/x-icon"
     />
   </head>
-
+  <Layout>
   <body
     class="relative min-h-screen w-full text-texto transition-colors duration-300 overflow-x-hidden"
   >
-    <HeaderDesktop />
-    <HeaderMobile client:load />
+
     <div
       class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
     >
@@ -220,6 +220,6 @@ import "../styles/global.css";
       </section>
     </main>
 
-    <Footer />
   </body>
+</Layout>
 </html>

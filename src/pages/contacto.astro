@@ -1,8 +1,6 @@
 ---
-import HeaderDesktop from "@/components/HeaderDesktop.jsx";
-import HeaderMobile from "@/components/HeaderMobile.jsx";
+
 import HeroContacto from "@/components/Hero/HeroContacto";
-import Footer from "@/components/Footer.astro";
 import {
   Phone,
   Mail,
@@ -13,6 +11,7 @@ import {
   UserCheck,
 } from "lucide-react";
 import "../styles/global.css";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -30,12 +29,11 @@ import "../styles/global.css";
         <!-- Favicon -->
         <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
   </head>
-
+ <Layout>
   <body
     class="relative min-h-screen w-full text-texto transition-colors duration-300 overflow-x-hidden"
   >
-    <HeaderDesktop />
-    <HeaderMobile client:load />
+
 
     <!-- Fondo decorativo -->
     <div
@@ -182,6 +180,6 @@ import "../styles/global.css";
       </section>
     </main>
 
-    <Footer />
   </body>
+</Layout>
 </html>
