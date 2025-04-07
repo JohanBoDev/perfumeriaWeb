@@ -24,7 +24,11 @@ const PerfumesCarousel = () => {
 
   return (
     <>
-      <section className="w-full max-w-screen-xl mx-auto px-4 py-10 h-[70vh]" id="favoritos">
+<section
+  id="favoritos"
+  className="w-full max-w-screen-xl mx-auto px-4 py-10 
+             h-auto sm:h-[70vh] md:h-[75vh] lg:h-[80vh] xl:h-[85vh]"
+>
         <h2 className="text-3xl font-bold text-center mb-8 text-neutral-800">Perfumes Destacados</h2>
 
         <Swiper
@@ -40,7 +44,7 @@ const PerfumesCarousel = () => {
     1024: { slidesPerView: 4 },
     1280: { slidesPerView: 5 },
   }}
-  className="[&_.swiper-pagination]:gap-3 [&_.swiper-pagination]:mt-6 h-full"
+  className="[&_.swiper-pagination]:gap-3 [&_.swiper-pagination]:mt-0 h-full"
 >
   {destacados.map((perfume) => (
     <SwiperSlide key={perfume.id}>
