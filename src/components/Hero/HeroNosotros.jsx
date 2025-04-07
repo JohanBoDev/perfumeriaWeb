@@ -1,13 +1,13 @@
 export default function HeroNosotros() {
     return (
-      <section className="text-gray-900 px-6 md:px-20 flex flex-col lg:flex-row items-center justify-evenly gap-10 min-h-[calc(100vh-100px)]">
+      <section className="text-gray-900 px-6 md:px-20 flex flex-col lg:flex-row items-center lg:justify-evenly gap-10 min-h-[calc(100vh-100px)]">
         
         {/* Imagen izquierda */}
         <div className="w-full md:w-[50%] lg:w-[40%] flex justify-center items-center">
           <img 
             src="/img/hero-nosotros.png" 
             alt="Perfume 3D representando a la marca Shesman"
-            className="h-[400px] sm:h-auto w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
+            className="h-[200px] mt-20 sm:h-auto w-auto max-w-sm sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
             loading="lazy"
           />
         </div>
