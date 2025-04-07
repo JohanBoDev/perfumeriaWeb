@@ -1,5 +1,4 @@
 ---
-
 import HeroFavoritos from "@/components/Hero/HeroFavoritos.jsx";
 import FiltroPerfumes from "@/components/Perfumes/FiltroPerfume.jsx";
 import BannerPromo from "@/components/BannerPromo.astro";
@@ -14,29 +13,63 @@ import Layout from "@/layouts/Layout.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- SEO para la página de perfumes -->
     <title>Comprar Perfumes Originales en Colombia | Shesman Perfumes</title>
-    <meta name="description" content="Explora nuestro catálogo de perfumes originales para hombre y mujer. Fragancias auténticas y memorables con envío a toda Colombia.">
-    <meta name="keywords" content="perfumes originales, fragancias mujer, fragancias hombre, comprar perfumes Colombia, perfumes exclusivos, Shesman Perfumes" />
+    <meta
+      name="description"
+      content="Explora nuestro catálogo de perfumes originales para hombre y mujer. Fragancias auténticas y memorables con envío a toda Colombia."
+    />
+    <meta
+      name="keywords"
+      content="perfumes originales, fragancias mujer, fragancias hombre, comprar perfumes Colombia, perfumes exclusivos, Shesman Perfumes"
+    />
     <meta name="robots" content="index, follow" />
-        <!-- Favicon -->
-        <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
+    <!-- Open Graph / Redes Sociales -->
+    <meta
+      property="og:title"
+      content="Comprar Perfumes Originales en Colombia | Shesman Perfumes"
+    />
+    <meta
+      property="og:description"
+      content="Explora nuestro catálogo de perfumes originales para hombre y mujer. Fragancias auténticas y memorables con envío a toda Colombia."
+    />
+    <meta
+      property="og:image"
+      content="https://www.shesmanperfumes.com/img/img-muestra.jpg"
+    />
+    <meta property="og:url" content="https://www.shesmanperfumes.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="/img/favicon_shesman_white.ico"
+      type="image/x-icon"
+    />
   </head>
- <Layout>
-  <body class="relative min-h-screen w-full text-texto bg-white transition-colors duration-300 overflow-x-hidden">
+  <Layout>
+    <body
+      class="relative min-h-screen w-full text-texto bg-white transition-colors duration-300 overflow-x-hidden"
+    >
+      <!-- Fondo decorativo -->
+      <div
+        class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
+      >
+      </div>
 
-    
-    <!-- Fondo decorativo -->
-    <div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
-
-      <main class="container mx-auto px-4 py-12 ">
+      <main class="container mx-auto px-4 py-12">
         <HeroFavoritos client:load />
-        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-center  mt-10 mb-5">
+        <h1
+          class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mt-10 mb-5"
+        >
           Perfumes Originales para Hombre y Mujer
         </h1>
-        <p class="text-center  text-neutral-600 mb-12 max-w-2xl mx-auto">
-          Descubre fragancias auténticas, elegantes y memorables para cada personalidad. Envíos a todo Colombia. Filtra por género, marca, tamaño o familia olfativa.
+        <p class="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
+          Descubre fragancias auténticas, elegantes y memorables para cada
+          personalidad. Envíos a todo Colombia. Filtra por género, marca, tamaño
+          o familia olfativa.
         </p>
 
         <FiltroPerfumes client:only="react" />
@@ -52,8 +85,8 @@ import Layout from "@/layouts/Layout.astro";
         <div class="mt-10">
           <MapaUbicacion />
         </div>
-
       </main>
-  </body>
-</Layout>
+    </body>
+  </Layout>
+
 </html>
