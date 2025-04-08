@@ -34,7 +34,7 @@ export default function HeaderMobile() {
         {/* Logo */}
         <div className="flex justify-end flex-grow pr-10">
           <img
-            src="/img/eslogan-removebg-preview.png"
+            src="/img/eslogan-removebg-preview.webp"
             alt="Logo Shesman"
             className="h-16 w-auto object-contain"
           />

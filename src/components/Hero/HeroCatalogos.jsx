@@ -7,7 +7,7 @@ export default function HeroCatalogos() {
 
      <div class="w-full md:w-[50%] lg:w-[40%] flex justify-center items-center">
       <img 
-        src="/img/hero-catalogo.png" 
+        src="/img/hero-catalogo.webp" 
         alt="Catálogo descargable con perfumes premium"
         class="h-[400px] sm:h-auto w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
         loading="lazy"

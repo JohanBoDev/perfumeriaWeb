@@ -30,7 +30,7 @@ export default function HeroHombre() {
 
 <div class="w-full sm:w-[80%] md:w-[60%] lg:w-[35%] flex justify-center items-center">
   <img 
-    src="/img/hero-hombre.png" 
+    src="/img/hero-hombre.webp" 
     alt="Perfumes para hombre: Boss, Le Male y Azzaro Wanted"
     width="600"
     height="400"

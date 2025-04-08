@@ -36,7 +36,7 @@ export default function TarjetaPerfume({ perfume, openModal }) {
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-md transition"
         >
-          <img src="/img/logo-whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
+          <img src="/img/logo-whatsapp.webp" alt="WhatsApp" className="w-5 h-5" />
           WhatsApp
         </a>
 

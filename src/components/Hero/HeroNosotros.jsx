@@ -5,7 +5,7 @@ export default function HeroNosotros() {
         {/* Imagen izquierda */}
         <div className="w-full md:w-[50%] lg:w-[40%] flex justify-center items-center">
           <img 
-            src="/img/hero-nosotros.png" 
+            src="/img/hero-nosotros.webp" 
             alt="Perfume 3D representando a la marca Shesman"
             className="h-[200px] mt-20 sm:h-auto w-auto max-w-sm sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
             loading="lazy"

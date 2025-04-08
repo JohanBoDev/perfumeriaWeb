@@ -8,7 +8,7 @@ export default function HeroFavoritos() {
   
     <div class="w-full md:w-[50%] lg:w-[40%] flex justify-center items-center">
       <img 
-        src="/img/hero-favoritos.png" 
+        src="/img/hero-favoritos.webp" 
         alt="Perfumes más amados por los clientes"
         class="h-[400px] sm:h-auto w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
         loading="lazy"

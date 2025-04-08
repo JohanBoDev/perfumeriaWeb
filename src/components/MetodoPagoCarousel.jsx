@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules'
 const metodosPago = [
   {
     nombre: 'PayU',
-    imagen: 'img/metodos-pago/logo-payu.png',
+    imagen: 'img/metodos-pago/logo-payu.webp',
     alt: 'Logo de PayU método de pago',
   },
   {
@@ -16,22 +16,22 @@ const metodosPago = [
   },
   {
     nombre: 'Daviplata',
-    imagen: 'img/metodos-pago/logo-daviplata.png',
+    imagen: 'img/metodos-pago/logo-daviplata.webp',
     alt: 'Logo de Daviplata',
   },
   {
     nombre: 'PSE',
-    imagen: 'img/metodos-pago/logo-pse.png',
+    imagen: 'img/metodos-pago/logo-pse.webp',
     alt: 'Logo de PSE pago seguro en línea',
   },
   {
     nombre: 'Visa',
-    imagen: 'img/metodos-pago/logo-visa.png',
+    imagen: 'img/metodos-pago/logo-visa.webp',
     alt: 'Logo de tarjeta Visa',
   },
   {
     nombre: 'MasterCard',
-    imagen: 'img/metodos-pago/logo-mastercard.png',
+    imagen: 'img/metodos-pago/logo-mastercard.webp',
     alt: 'Logo de tarjeta MasterCard',
   },
 ]

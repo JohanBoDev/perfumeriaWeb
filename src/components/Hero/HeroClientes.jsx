@@ -5,7 +5,7 @@ export default function HeroClientes() {
 <section class="text-gray-900 px-6 md:px-20 flex flex-col xl:flex-row items-center justify-evenly gap-10 min-h-[calc(100vh-100px)]">
      <div class="w-full md:w-[50%] lg:w-[40%] flex justify-center items-center">
       <img 
-        src="/img/hero-clientes-satisfechos.png" 
+        src="/img/hero-clientes-satisfechos.webp" 
         alt="Perfume sostenido en mano mostrando satisfacción de clientes"
         class="h-[400px] sm:h-auto w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
         loading="lazy"

@@ -5,7 +5,7 @@ export default function HeroOfertas() {
   
     <div class="w-full md:w-[50%] lg:w-[40%] flex justify-center items-center">
       <img 
-        src="/img/hero-ofertas.png" 
+        src="/img/hero-ofertas.webp" 
         alt="Perfumes en oferta con descuentos especiales"
         class="h-[400px] sm:h-auto w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
         loading="lazy"
