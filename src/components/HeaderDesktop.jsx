@@ -33,6 +33,8 @@ export default function HeaderDesktop() {
         <img
           src="/img/eslogan-removebg-preview.webp"
           alt="Logo Shesman"
+          width="200"
+          height="80"
           className="h-10 w-auto object-contain transform scale-[2] origin-center pointer-events-auto hidden md:block"
         />
 

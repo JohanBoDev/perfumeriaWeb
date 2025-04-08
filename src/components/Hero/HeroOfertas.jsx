@@ -4,12 +4,15 @@ export default function HeroOfertas() {
 <section class="text-gray-900 px-6 md:px-20 flex flex-col xl:flex-row items-center justify-evenly gap-10 min-h-[calc(100vh-100px)]">
   
     <div class="w-full md:w-[50%] lg:w-[40%] flex justify-center items-center">
-      <img 
-        src="/img/hero-ofertas.webp" 
-        alt="Perfumes en oferta con descuentos especiales"
-        class="h-[400px] sm:h-auto w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
-        loading="lazy"
-      />
+    <img
+  src="/img/hero-ofertas.webp"
+  alt="Perfumes en oferta con descuentos especiales"
+  width="400"
+  height="400"
+  class="h-[400px] sm:h-auto w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain"
+  loading="lazy"
+/>
+
     </div>
 
     <div class="max-w-xl  md:pt-20">
