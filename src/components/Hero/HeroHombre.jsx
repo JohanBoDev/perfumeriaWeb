@@ -28,14 +28,17 @@ export default function HeroHombre() {
 </div>
 
 
-  <div class="w-full sm:w-[80%] md:w-[60%] lg:w-[35%] flex justify-center items-center">
-    <img 
-      src="/img/hero-hombre.png" 
-      alt="Perfumes para hombre: Boss, Le Male y Azzaro Wanted"
-      class="h-[400px] sm:h-auto w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
-      loading="lazy"
-    />
-  </div>
+<div class="w-full sm:w-[80%] md:w-[60%] lg:w-[35%] flex justify-center items-center">
+  <img 
+    src="/img/hero-hombre.png" 
+    alt="Perfumes para hombre: Boss, Le Male y Azzaro Wanted"
+    width="600"
+    height="400"
+    loading="lazy"
+    class="h-[400px] sm:h-auto w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain drop-shadow-xl scale-100 md:scale-110 lg:scale-125 transition-transform duration-300" 
+  />
+</div>
+
 
 </section>
 
