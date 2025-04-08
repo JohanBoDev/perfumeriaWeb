@@ -31,7 +31,7 @@ export default function TarjetaPerfume({ perfume, openModal }) {
 
       <div className="flex flex-col gap-2 mt-4 w-full">
         <a
-          href={`https://wa.me/573224395306?text=Hola!%20Quiero%20comprar%20el%20perfume%20${encodeURIComponent(perfume.nombre)}%20de%20${encodeURIComponent(perfume.marca)}`}
+          href={`https://wa.me/573214879877?text=Hola!%20Quiero%20comprar%20el%20perfume%20${encodeURIComponent(perfume.nombre)}%20de%20${encodeURIComponent(perfume.marca)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-md transition"

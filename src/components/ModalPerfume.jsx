@@ -80,7 +80,7 @@ const ModalPerfume = ({ perfume, onClose }) => {
             )}
 
             <a
-              href={`https://wa.me/573224395306?text=Hola!%20Quiero%20comprar%20el%20perfume%20${encodeURIComponent(perfume.nombre)}%20de%20${encodeURIComponent(perfume.marca)}`}
+              href={`https://wa.me/573214879877?text=Hola!%20Quiero%20comprar%20el%20perfume%20${encodeURIComponent(perfume.nombre)}%20de%20${encodeURIComponent(perfume.marca)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-6 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-md transition"

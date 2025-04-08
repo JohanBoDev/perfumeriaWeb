@@ -4,11 +4,11 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 
 const metodosPago = [
-  {
+ /* {
     nombre: "PayU",
     imagen: "img/metodos-pago/logo-payu.webp",
     alt: "Logo de PayU método de pago",
-  },
+  }*/,
   {
     nombre: "Nequi",
     imagen: "img/metodos-pago/logo-nequi.svg",
@@ -19,6 +19,7 @@ const metodosPago = [
     imagen: "img/metodos-pago/logo-daviplata.webp",
     alt: "Logo de Daviplata",
   },
+  
   {
     nombre: "PSE",
     imagen: "img/metodos-pago/logo-pse.webp",
@@ -34,6 +35,16 @@ const metodosPago = [
     imagen: "img/metodos-pago/logo-mastercard.webp",
     alt: "Logo de tarjeta MasterCard",
   },
+  {
+    nombre: "Bancolombia",
+    imagen: "img/metodos-pago/logo-bancolombia.webp",
+    alt: "Logo de Bancolombia",
+  },
+  {
+    nombre: "Davivienda",
+    imagen: "img/metodos-pago/logo-davivienda.webp",  
+    alt: "Logo de Davivienda",
+  }
 ];
 
 export default function MetodoPagoCarousel() {

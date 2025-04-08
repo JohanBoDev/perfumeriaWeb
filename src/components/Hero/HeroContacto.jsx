@@ -12,7 +12,7 @@ export default function HeroContacto() {
         </p>
         <div className="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
           <a
-            href="https://wa.me/573224395306"
+            href="https://wa.me/573214879877"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-500 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-lg text-center transition"
