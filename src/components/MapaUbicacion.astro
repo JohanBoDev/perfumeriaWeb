@@ -1,27 +1,47 @@
 <section class="mt-10 bg-white">
-    <div class="max-w-7xl mx-auto px-6 py-12">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 mb-6 tracking-tight">
-            Encuéntranos en Bogotá
-          </h2>
-          <p class="text-neutral-700 text-lg leading-relaxed max-w-xl mb-4">
-            Nuestra tienda se encuentra en una zona exclusiva de la ciudad, donde el lujo y la elegancia se encuentran con la sofisticación de nuestras fragancias.
-          </p>
-          <p class="text-neutral-800 text-base font-medium italic mb-8">
-            Carrera 7 # 72 - 64, Bogotá D.C., Colombia
-          </p>
-          
-  
-      <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg border border-neutral-300">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.831269436768!2d-74.05830758523733!3d4.658374943410392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9aa7ea42e1cf%3A0xd9b2f0aef1c5d3a6!2sCra.%207%20%23%2072-64%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1711743797151!5m2!1ses!2sco"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 mb-6 tracking-tight">
+      Encuéntranos en Bogotá
+    </h2>
+    <p class="text-neutral-700 text-lg leading-relaxed max-w-xl mb-4">
+      Nuestra tienda se encuentra en una zona exclusiva de la ciudad, donde el lujo y la elegancia se encuentran con la sofisticación de nuestras fragancias.
+    </p>
+    <p class="text-neutral-800 text-base font-medium italic mb-8">
+      Carrera 7 # 72 - 64, Bogotá D.C., Colombia
+    </p>
+
+    <div
+      id="map-placeholder"
+      class="w-full h-96 rounded-xl overflow-hidden shadow-lg border border-neutral-300 flex items-center justify-center bg-neutral-200 text-neutral-500 text-sm italic"
+    >
+      Cargando mapa...
     </div>
-  </section>
+  </div>
+  <script>
+    if (typeof window !== "undefined") {
+      const target = document.getElementById("map-placeholder");
   
+      if (target) {
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            target.innerHTML = `
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.831269436768!2d-74.05830758523733!3d4.658374943410392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9aa7ea42e1cf%3A0xd9b2f0aef1c5d3a6!2sCra.%207%20%23%2072-64%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1711743797151!5m2!1ses!2sco"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            `;
+            observer.disconnect();
+          }
+        });
+  
+        observer.observe(target);
+      }
+    }
+  </script>
+  
+</section>
