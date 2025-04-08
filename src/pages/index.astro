@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BannerPromo from "@/components/BannerPromo.astro";
 import HeroSlider from "../components/Slider/HeroSlider.jsx";
 import PerfumesCarousel from "@/components/CarrouselPerfumes.jsx";
 import MetodoPagoCarousel from "@/components/MetodoPagoCarousel.jsx";
@@ -15,6 +16,7 @@ import MapaUbicacion from "@/components/MapaUbicacion.astro";
   <HeroSlider client:only="react" />
   <section class="container mx-auto px-4 py-8">
     <PerfumesCarousel client:only="react" />
+    <BannerPromo />
     <MetodoPagoCarousel client:only="react" />
     <MapaUbicacion />
   </section>
