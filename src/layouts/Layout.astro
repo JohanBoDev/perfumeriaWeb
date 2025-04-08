@@ -1,5 +1,4 @@
 ---
-// src/layouts/Layout.astro
 import HeaderDesktop from "../components/HeaderDesktop.jsx";
 import HeaderMobile from "../components/HeaderMobile.jsx";
 import Footer from "@/components/Footer.astro";
@@ -14,6 +13,16 @@ const {
 
 <html lang="es">
   <head>
+    <!-- Google Tag Manager -->
+    <script is:raw>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id=GTM-WQCKFM88'+dl;f.parentNode?.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WQCKFM88');
+    </script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
@@ -36,22 +45,16 @@ const {
 
     <!-- Favicon -->
     <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6RGXWTP3S"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args) {{
-        dataLayer.push(args);
-      }}
-      gtag('js', new Date());
-      gtag('config', 'G-M6RGXWTP3S');
-    </script>
   </head>
 
   <body class="bg-white text-neutral-800 scroll-smooth">
-     <!-- NUEVO FONDO -->
-     <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQCKFM88"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- NUEVO FONDO -->
+    <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
     <HeaderDesktop />
     <HeaderMobile client:load />
