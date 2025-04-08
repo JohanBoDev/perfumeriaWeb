@@ -3,36 +3,61 @@
 import HeaderDesktop from "../components/HeaderDesktop.jsx";
 import HeaderMobile from "../components/HeaderMobile.jsx";
 import Footer from "@/components/Footer.astro";
+
+const {
+  title = "Shesman Perfumes Premium",
+  description = "Perfumes originales para hombre y mujer. Compra segura en Shesman Perfumes.",
+  ogImage = "https://www.shesmanperfumes.com/img/img-muestra.jpg",
+  ogUrl = "https://www.shesmanperfumes.com",
+} = Astro.props;
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shesman Perfumes Premium</title>
-    <meta name="description" content="Perfumes originales para hombre y mujer. Compra segura en Shesman Perfumes." />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6RGXWTP3S"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args) {
+      function gtag(...args) {{
         dataLayer.push(args);
-      }
+      }}
       gtag('js', new Date());
       gtag('config', 'G-M6RGXWTP3S');
     </script>
   </head>
 
-  <body class="bg-white text-neutral-800">
+  <body class="bg-white text-neutral-800 scroll-smooth">
+     <!-- NUEVO FONDO -->
+     <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
     <HeaderDesktop />
     <HeaderMobile client:load />
-
     <main class="mt-16">
-      <slot /> <!-- Aquí se inyectará el contenido de cada página -->
+      <slot />
     </main>
-
     <Footer />
   </body>
 </html>

@@ -1,55 +1,40 @@
 ---
-
+import Layout from "@/layouts/Layout.astro";
 import HeroOfertas from "@/components/Hero/HeroOfertas.jsx";
 import BannerPromo from "@/components/BannerPromo.astro";
 import MetodoPagoCarousel from "@/components/MetodoPagoCarousel.jsx";
 import OfertasListaYModal from "@/components/Ofertas/OfertasListaYModal.jsx";
-import {perfumes} from "@/data/perfumes-puro.data.js";
-import Layout from "@/layouts/Layout.astro";
+import { perfumes } from "@/data/perfumes-puro.data.js";
 ---
 
-<html lang="es" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ofertas en Perfumes Originales | Shesman Perfumes Colombia</title>
-    <meta name="description" content="Aprovecha ofertas limitadas en perfumes originales para él y para ella. Fragancias elegantes con descuentos únicos en Shesman Perfumes. ¡Compra hoy!">
-    <meta name="keywords" content="ofertas perfumes, perfumes con descuento, fragancias rebajadas, promociones perfumes, perfumes originales en oferta, Shesman Perfumes" />
-    <meta name="robots" content="index, follow" />
-    <!-- Open Graph / Redes Sociales -->
-    <meta property="og:title" content="Ofertas en Perfumes Originales | Shesman Perfumes Colombia" />
-    <meta property="og:description" content="Aprovecha ofertas limitadas en perfumes originales para él y para ella. Fragancias elegantes con descuentos únicos en Shesman Perfumes. ¡Compra hoy!" />
-    <meta property="og:image" content="https://www.shesmanperfumes.com/img/img-muestra.jpg" />
-    <meta property="og:url" content="https://www.shesmanperfumes.com/ofertas" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_CO" />
-    <meta property="og:image:alt" content="Aprovecha ofertas limitadas en perfumes originales para él y para ella. Fragancias elegantes con descuentos únicos en Shesman Perfumes. ¡Compra hoy!" />
-    
-        <!-- Favicon -->
-        <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
-  </head>
- <Layout>
-  <body class="relative min-h-screen w-full text-texto bg-white transition-colors duration-300 overflow-x-hidden">
-
+<Layout
+  title="Ofertas en Perfumes Originales | Shesman Perfumes Colombia"
+  description="Aprovecha ofertas limitadas en perfumes originales para él y para ella. Fragancias elegantes con descuentos únicos en Shesman Perfumes. ¡Compra hoy!"
+  ogImage="https://www.shesmanperfumes.com/img/img-muestra.jpg"
+  ogUrl="https://www.shesmanperfumes.com/ofertas"
+>
+  <div class="relative min-h-screen w-full text-texto bg-white transition-colors duration-300 overflow-x-hidden">
     <div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
     <HeroOfertas client:load />
+
     <main class="container mx-auto px-4 py-16">
       <h1 class="text-3xl md:text-5xl font-bold text-center text-sky-900 mb-4" id="ofertas">
         Ofertas de Perfumes
       </h1>
       <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        Aprovecha nuestras promociones por tiempo limitado en perfumes originales para hombre, mujer y unisex. ¡Descuentos exclusivos solo en Shesman Perfumes!
+        Aprovecha nuestras promociones por tiempo limitado en perfumes originales para hombre, mujer y unisex.
+        ¡Descuentos exclusivos solo en Shesman Perfumes!
       </p>
 
       <OfertasListaYModal client:only="react" perfumes={perfumes} />
-        <div class="mt-10">
-            <BannerPromo />
-        </div>
-        <div class="mt-10">
-            <MetodoPagoCarousel client:only="react" />
-        </div>
-    </main>
 
-  </body>
- </Layout>
-</html>
+      <div class="mt-10">
+        <BannerPromo />
+      </div>
+      <div class="mt-10">
+        <MetodoPagoCarousel client:only="react" />
+      </div>
+    </main>
+  </div>
+</Layout>

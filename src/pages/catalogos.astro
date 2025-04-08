@@ -1,139 +1,58 @@
 ---
-
+import Layout from "@/layouts/Layout.astro";
 import HeroCatalogos from "@/components/Hero/HeroCatalogos.jsx";
 import BannerPromo from "@/components/BannerPromo.astro";
 import MapaUbicacion from "@/components/MapaUbicacion.astro";
-import "../styles/global.css";
-import Layout from "@/layouts/Layout.astro";
 
 const catalogos = [
-  {
-    titulo: "Catálogo de Perfumes Mujer 2025",
-    imagen: "img/catalogos/catalogo-mujer.webp",
-    archivo: "/pdf/catalogo-shesman.pdf",
-  },
-  {
-    titulo: "Catálogo de Perfumes Hombre 2025",
-    imagen: "img/catalogos/catalogo-hombre.webp",
-    archivo: "/pdf/catalogo-shesman2.pdf",
-  },
-  {
-    titulo: "Catálogo de Ofertas Exclusivas",
-    imagen: "img/catalogos/catalogo-mujer.webp",
-    archivo: "/pdf/catalogo-ofertas.pdf",
-  },
-  {
-    titulo: "Colección Premium Unisex",
-    imagen: "img/catalogos/catalogo-unisex.webp",
-    archivo: "/pdf/catalogo-premium.pdf",
-  },
+  { titulo: "Catálogo de Perfumes Mujer 2025", imagen: "img/catalogos/catalogo-mujer.webp", archivo: "/pdf/catalogo-shesman.pdf" },
+  { titulo: "Catálogo de Perfumes Hombre 2025", imagen: "img/catalogos/catalogo-hombre.webp", archivo: "/pdf/catalogo-shesman2.pdf" },
+  { titulo: "Catálogo de Ofertas Exclusivas", imagen: "img/catalogos/catalogo-mujer.webp", archivo: "/pdf/catalogo-ofertas.pdf" },
+  { titulo: "Colección Premium Unisex", imagen: "img/catalogos/catalogo-unisex.webp", archivo: "/pdf/catalogo-premium.pdf" },
 ];
 ---
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<Layout
+  title="Descarga Catálogos de Perfumes Originales | Shesman Perfumes"
+  description="Descarga gratis los catálogos en PDF de perfumes originales para hombre, mujer y unisex. Fragancias exclusivas de Shesman Perfumes con envío en Colombia."
+  ogImage="https://www.shesmanperfumes.com/img/img-muestra.jpg"
+  ogUrl="https://www.shesmanperfumes.com/catalogos"
+>
+  <HeroCatalogos client:load />
 
-  <!-- SEO para la página de catálogos -->
-  <title>Descarga Catálogos de Perfumes Originales | Shesman Perfumes</title>
-  <meta
-    name="description"
-    content="Descarga gratis los catálogos en PDF de perfumes originales para hombre, mujer y unisex. Fragancias exclusivas de Shesman Perfumes con envío en Colombia."
-  />
-  <meta
-    name="keywords"
-    content="catálogos de perfumes, perfumes originales, fragancias hombre, fragancias mujer, perfumes Colombia, Shesman Perfumes, descargar catálogo perfumes"
-  />
-  <meta name="robots" content="index, follow" />
-     <!-- Favicon -->
-     <link rel="icon" href="/img/favicon_shesman_white.ico" type="image/x-icon" />
+  <section class="py-10 px-6 max-w-7xl mx-auto">
+    <h1 class="text-3xl md:text-5xl font-bold text-center text-black mb-4">
+      Catálogos
+    </h1>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      Descarga nuestros catálogos de perfumes en PDF. Explora nuestras
+      colecciones exclusivas para mujer, hombre, unisex y descuentos especiales.
+    </p>
 
-  <!-- Open Graph / Redes Sociales -->
-  <meta
-    property="og:title"
-    content="Descarga Catálogos de Perfumes Originales | Shesman Perfumes"
-  />
-  <meta
-    property="og:description"
-    content="Descarga gratis los catálogos en PDF de perfumes originales para hombre, mujer y unisex. Fragancias exclusivas de Shesman Perfumes con envío en Colombia."
-  />
-  <meta
-    property="og:image"
-    content="https://www.shesmanperfumes.com/img/img-muestra.jpg"
-  />
-  <meta
-    property="og:url"
-    content="https://www.shesmanperfumes.com/catalogos"
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="es_CO" />
-
-  </head>
-  <Layout>
-     <body
-    class="relative min-h-screen w-full text-texto bg-white transition-colors duration-300 overflow-x-hidden"
-  >
-
-    <!-- Fondo decorativo -->
-    <div
-      class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
-    >
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        catalogos.map(({ titulo, imagen, archivo }) => (
+          <article class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 transition-transform hover:scale-[1.02] flex flex-col">
+            <img src={imagen} alt={`Portada de ${titulo}`} class="w-full h-80 object-cover" loading="lazy" />
+            <div class="flex flex-col justify-between p-10 flex-1">
+              <div class="mb-4">
+                <h2 class="text-xl font-semibold text-sky-900 mb-2">{titulo}</h2>
+                <p class="text-sm text-gray-600">
+                  Conoce las últimas fragancias y promociones en nuestro catálogo.
+                </p>
+              </div>
+              <a href={archivo} target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 bg-red-600 text-white text-sm font-semibold py-2.5 px-5 rounded-md hover:bg-red-700 transition-colors">
+                <img src="/img/icon-pdf.png" alt="PDF" class="w-5 h-5" />
+                Descargar catálogo
+              </a>
+            </div>
+          </article>
+        ))
+      }
     </div>
-    <main class="">
-      <HeroCatalogos client:load />
-      <section class="py-10 px-6 max-w-7xl mx-auto">
-        <h1 class="text-3xl md:text-5xl font-bold text-center text-black mb-4">
-          Catálogos
-        </h1>
-        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Descarga nuestros catálogos de perfumes en PDF. Explora nuestras
-          colecciones exclusivas para mujer, hombre, unisex y descuentos
-          especiales.
-        </p>
+  </section>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {
-            catalogos.map(({ titulo, imagen, archivo }) => (
-              <article class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 transition-transform hover:scale-[1.02] flex flex-col">
-                <img
-                  src={imagen}
-                  alt={`Portada de ${titulo}`}
-                  class="w-full h-80 object-fit object-center"
-                  loading="lazy"
-                />
-                <div class="flex flex-col justify-between p-10 flex-1">
-                  <div class="mb-4">
-                    <h2 class="text-xl font-semibold text-sky-900 mb-2">
-                      {titulo}
-                    </h2>
-                    <p class="text-sm text-gray-600">
-                      Conoce las últimas fragancias y promociones en nuestro
-                      catálogo. Ideal para descubrir el perfume perfecto.
-                    </p>
-                  </div>
-                  <a
-                    href={archivo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center gap-2 bg-red-600 text-white text-sm font-semibold py-2.5 px-5 rounded-md hover:bg-red-700 transition-colors"
-                  >
-                    <img
-                      src="/img/icon-pdf.png"
-                      alt="Icono PDF"
-                      class="w-5 h-5"
-                    />
-                    Descargar catálogo
-                  </a>
-                </div>
-              </article>
-            ))
-          }
-        </div>
-      </section>
-      <BannerPromo />
-      <MapaUbicacion />
-    </main>
-
-  </body>
-  </Layout>
-</head>
+  <BannerPromo />
+  <MapaUbicacion />
+</Layout>
